@@ -1,144 +1,202 @@
-﻿using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using static Zelda.Game1;
 
 namespace Zelda
 {
     class Player
-    { // Current player position in the matrix (multiply by tileSize prior to drawing)
+    {
+        public Point Position { get; set; }
+        private Game1 game;
 
-        private Point position; //Point = Vector2, mas são inteiros
-        public Point Position => position; //auto função (equivalente a ter só get sem put) - AUTOPROPERTY
-                                           //public Vector2 Position
-                                           //{
-                                           // get{return position;}
-                                           //}
-        private Game1 game; //reference from Game1 to Player
-        private bool keysReleased = true;
+        // Variáveis para movimento suave
+        private Vector2 pixelPosition;
+        private float moveSpeed = 200f; // pixels por segundo
+        private Direction lastMoveDirection;
+        private bool isMoving = false;
 
+        public Texture2D Texture { get; set; }
+        public int TileSize { get; set; }
 
-        //private Texture2D[][] sprites;
-        private Direction direction = Direction.Down;
-        private Vector2 directionVector;
-        private int speed = 2; //Nota: tem de ser divisor de tileSize
-        private int delta = 0;
+        private Texture2D spriteSheet;
+        private Rectangle[] frames;
+        private int currentFrame;
+        private float frameTime = 0.1f; // Tempo entre frames 
+        private float elapsedTime;
+        private int animationDirection;
 
-        public Player(Game1 game1, int x, int y) //constructor que dada a as posições guarda a sua posição
+        public Player(Game1 game, int x, int y)
         {
-            position = new Point(x, y);
-            game = game1;
-        }
-
-        public void LoadContents()
-        {
-            //player = new Texture2D[4];
-            //player[(int)Direction.Down] = Content.Load<Texture2D>("Character4");
-            //player[(int)Direction.Up] = Content.Load<Texture2D>("Character7");
-            //player[(int)Direction.Left] = Content.Load<Texture2D>("Character1");
-            //player[(int)Direction.Right] = Content.Load<Texture2D>("Character2");
+            this.game = game;
+            Position = new Point(x, y);
+            TileSize = game.TileSize; // Armazena o tileSize localmente
+            pixelPosition = new Vector2(x * game.TileSize, y * game.TileSize);
         }
 
         public void Update(GameTime gameTime)
         {
-            //point lastposition = position;
-            //keyboardstate kstate = keyboard.getstate();
-            //if (keysreleased)
-            //{
-            //    keysreleased = false;
-            //    if ((kstate.iskeydown(keys.a)) || (kstate.iskeydown(keys.left)))
-            //    {
-            //        position.x--;
-            //        game.direction = direction.left;
-            //    }
-            //    else if ((kstate.iskeydown(keys.w)) || (kstate.iskeydown(keys.up)))
-            //    {
-            //        position.y--;
-            //        game.direction = direction.up;
-            //    }
-            //    else if ((kstate.iskeydown(keys.s)) || (kstate.iskeydown(keys.down)))
-            //    {
-            //        position.y++;
-            //        game.direction = direction.down;
-            //    }
-            //    else if ((kstate.iskeydown(keys.d)) || (kstate.iskeydown(keys.right)))
-            //    {
-            //        position.x++;
-            //        game.direction = direction.right;
-            //    }
-            //    else keysreleased = true;
-            //}
-            //else
-            //{
-            //    if (kstate.iskeyup(keys.a) && kstate.iskeyup(keys.w) &&
-            //    kstate.iskeyup(keys.s) && kstate.iskeyup(keys.d))
-            //    {
-            //        keysreleased = true;
-            //    }
-            //}
+            KeyboardState kstate = Keyboard.GetState();
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            Vector2 movement = Vector2.Zero;
+            Direction currentDirection = lastMoveDirection;
 
-            //// destino é caixa?
-            //if (game.hasbox(position.x, position.y))
-            //{
-            //    int deltax = position.x - lastposition.x;
-            //    int deltay = position.y - lastposition.y;
-            //    point boxtarget = new point(deltax + position.x, deltay + position.y);
-            //    // se sim, caixa pode mover-se?
-            //    if (game.freetile(boxtarget.x, boxtarget.y))
-            //    {
-            //        for (int i = 0; i < game.boxes.count; i++)
-            //        {
-            //            if (game.boxes[i].x == position.x && game.boxes[i].y == position.y)
-            //            {
-            //                game.boxes[i] = boxtarget;
-            //            }
-            //        }
-            //    }
-            //    else
-            //    {
-            //        position = lastposition;
-            //    }
-            //}
-            //else
-            //{
-            //    // se não é caixa, se não está livre, parado!
-            //    if (!game.freetile(position.x, position.y))
-            //        position = lastposition;
-            //}
+            // Verificar teclas pressionadas
+            if (kstate.IsKeyDown(Keys.Left) || kstate.IsKeyDown(Keys.A))
+            {
+                movement.X = -1;
+                currentDirection = Direction.Left;
+            }
+            else if (kstate.IsKeyDown(Keys.Right) || kstate.IsKeyDown(Keys.D))
+            {
+                movement.X = 1;
+                currentDirection = Direction.Right;
+            }
 
-            int maxX = game.currentScreen.X * screenWidthInTiles + screenWidthInTiles - 1;
-            int minX = game.currentScreen.X * screenWidthInTiles;
-            int maxY = game.currentScreen.Y * screenHeightInTiles + screenHeightInTiles - 1;
-            int minY = game.currentScreen.Y * screenHeightInTiles;
+            if (kstate.IsKeyDown(Keys.Up) || kstate.IsKeyDown(Keys.W))
+            {
+                movement.Y = -1;
+                currentDirection = Direction.Up;
+            }
+            else if (kstate.IsKeyDown(Keys.Down) || kstate.IsKeyDown(Keys.S))
+            {
+                movement.Y = 1;
+                currentDirection = Direction.Down;
+            }
 
-            if (position.X > maxX && game.currentScreen.X < worldWidthInScreens - 1)
+            // Normalizar movimento diagonal
+            if (movement != Vector2.Zero)
             {
-                game.currentScreen.X++;
-                position.X = minX; // reaparece do outro lado
+                movement.Normalize();
+                game.direction = currentDirection;
+                lastMoveDirection = currentDirection;
             }
-            else if (position.X < minX && game.currentScreen.X > 0)
+
+            // Calcular nova posição em pixels
+            Vector2 newPixelPosition = pixelPosition + movement * moveSpeed * deltaTime;
+            Point newTilePosition = new Point(
+                (int)(newPixelPosition.X / game.TileSize),
+                (int)(newPixelPosition.Y / game.TileSize));
+
+            // Verificar se o movimento muda de tile
+            bool changedTile = (Position != newTilePosition);
+
+            if (changedTile)
             {
-                game.currentScreen.X--;
-                position.X = maxX;
+                // Verificar se pode mover para o novo tile
+                if (game.FreeTile(newTilePosition.X, newTilePosition.Y))
+                {
+                    // Verificar colisão com caixas
+                    if (game.HasBox(newTilePosition.X, newTilePosition.Y))
+                    {
+                        int dx = newTilePosition.X - Position.X;
+                        int dy = newTilePosition.Y - Position.Y;
+                        Point boxTarget = new Point(newTilePosition.X + dx, newTilePosition.Y + dy);
+
+                        if (game.FreeTile(boxTarget.X, boxTarget.Y))
+                        {
+                            // Mover a caixa
+                            for (int i = 0; i < game.boxes.Count; i++)
+                            {
+                                if (game.boxes[i].X == newTilePosition.X && game.boxes[i].Y == newTilePosition.Y)
+                                {
+                                    game.boxes[i] = boxTarget;
+                                    Position = newTilePosition;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Position = newTilePosition;
+                    }
+                }
             }
-            else if (position.Y > maxY && game.currentScreen.Y < worldHeightInScreens - 1)
+
+            // Atualizar posição em pixels (com limites para não ultrapassar o tile atual)
+            if (Position.X == newTilePosition.X)
             {
-                game.currentScreen.Y++;
-                position.Y = minY;
+                pixelPosition.X = newPixelPosition.X;
             }
-            else if (position.Y < minY && game.currentScreen.Y > 0)
+            else
             {
-                game.currentScreen.Y--;
-                position.Y = maxY;
+                pixelPosition.X = Position.X * game.TileSize;
             }
+
+            if (Position.Y == newTilePosition.Y)
+            {
+                pixelPosition.Y = newPixelPosition.Y;
+            }
+            else
+            {
+                pixelPosition.Y = Position.Y * game.TileSize;
+            }
+
+            // Atualizar estado de movimento para animações
+            isMoving = (movement != Vector2.Zero);
+
+            // Atualizar animação
+            elapsedTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (elapsedTime >= frameTime)
+            {
+                elapsedTime = 0;
+                currentFrame = (currentFrame + 1) % 4; // Cicla entre 0-3
+            }
+
+            // Definir direção da animação (baseado no seu enum Direction)
+            animationDirection = game.direction switch
+            {
+                Direction.Down => 0,  // Primeira linha da spritesheet
+                Direction.Left => 2,  // Segunda linha
+                Direction.Right => 3, // Terceira linha 
+                Direction.Up => 1,    // Quarta linha
+                _ => 0
+            };
         }
 
-    }
+        public void Draw(SpriteBatch spriteBatch, Vector2 screenPosition)
+        {
+            // Desenhar o jogador na posição em pixels
+            int frameIndex = animationDirection * 4 + currentFrame;
+            Vector2 drawPosition = pixelPosition - screenPosition;
 
+            spriteBatch.Draw(
+                spriteSheet,
+                drawPosition,
+                frames[frameIndex],
+                Color.White,
+                0f,
+                Vector2.Zero,
+                1f,
+                (game.direction == Direction.Right) ? SpriteEffects.None : SpriteEffects.None,
+                0f
+            );
+        }
+
+        public void LoadContent(Texture2D sheet)
+        {
+            spriteSheet = sheet;
+            int frameWidth = sheet.Width / 4;  // 4 frames por linha
+            int frameHeight = sheet.Height / 4; // 4 direções
+
+            frames = new Rectangle[4 * 4]; // 4 direções x 4 frames
+
+            for (int y = 0; y < 4; y++)
+            {
+                for (int x = 0; x < 4; x++)
+                {
+                    frames[y * 4 + x] = new Rectangle(
+                        x * frameWidth,
+                        y * frameHeight,
+                        frameWidth,
+                        frameHeight
+                    );
+                }
+            }
+        }
+    }
 }
-    
+
 

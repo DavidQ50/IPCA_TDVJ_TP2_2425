@@ -1,11 +1,36 @@
-    XXXXX          
-    X   X          
-    X#  X          
-  XXX  #XX         
-  X  # # X         
-XXX X XX X   XXXXXX
-X   X XX XXXXX  ..X
-X #  #          ..X
-XXXXX XXX XYXX  ..X
-    X     XXXXXXXXX
-    XXXXXXX         
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                              X
+X                                              X
+X                                              X
+X Y       #      X       #      X             X
+X                                              X
+X              XXXXX                          X
+X                                              X
+X      XXXXXXXXXX       #                     X
+X                                              X
+X                                              X
+X                                              X
+X         #                                    X
+X                            XXXXXXX           X
+X                                              X
+X       XXXXX                                   X
+X                                              X
+X                                              X
+X            #                                 X
+X                        XXXXXX                X
+X                                              X
+X               #                              X
+X                                              X
+X    XXXXXXXXXXXXX                             X
+X    XXXXXXXXXXXXX                             X
+X                                              X
+X                  XXXXXX                      X
+X                                              X
+X                        ####                  X
+X                                              X
+X                                              X
+X                                              X
+X                                              X
+X                                              X
+X                                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

@@ -25,3 +25,5 @@ C:\Users\Briel\Desktop\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.pdb
 C:\Users\Briel\Desktop\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.genruntimeconfig.cache
 C:\Users\Briel\Desktop\projetos\Zelda\obj\Debug\net8.0-windows\ref\Zelda.dll
 C:\Users\Briel\Desktop\projetos\Zelda\bin\Debug\net8.0-windows\Content\map.txt
+C:\Users\Briel\Desktop\projetos\Zelda\bin\Debug\net8.0-windows\Content\player.png
+C:\Users\Briel\Desktop\projetos\Zelda\bin\Debug\net8.0-windows\Content\thornfloor damp.png
