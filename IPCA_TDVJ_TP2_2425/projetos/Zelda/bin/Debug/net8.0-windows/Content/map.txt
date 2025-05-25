@@ -1,0 +1,36 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X E   E                                        X
+X                                              X
+X                                              X
+X Y       E      X       E      X              X
+X                                              X
+X              XXXXX                           X
+X                                              X
+X      XXXXXXXXXX       E                      X
+X                                              X
+X                                              X
+X                                              X
+X         E                                    X
+X                            XXXXXXX           X
+X                                              X
+X       XXXXX                                  X
+X                                              X
+X                                 E            X
+X            E                                 X
+X                        XXXXXX                X
+X                                              X
+X               E                              X
+X                                              X
+X    XXXXXXXXXXXXX                             X
+X    XXXXXXXXXXXXX                             X
+X                                              X
+X                  XXXXXX                      X
+X                                              X
+X                        ####                  X
+X                                              X
+X                                              X
+X                                              X
+X                                        E     X
+X                                              X
+X          E                            EEEEEE X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

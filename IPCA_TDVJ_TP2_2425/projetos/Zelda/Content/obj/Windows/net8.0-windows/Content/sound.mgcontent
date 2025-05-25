@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/IPCA/1º Ano/2º Semestre/TDV/IPCA_TDVJ_TP2_2425/IPCA_TDVJ_TP2_2425/projetos/Zelda/Content/sound.mp3</SourceFile>
+  <SourceTime>2025-05-25T18:28:53.5269763+01:00</SourceTime>
+  <DestFile>C:/IPCA/1º Ano/2º Semestre/TDV/IPCA_TDVJ_TP2_2425/IPCA_TDVJ_TP2_2425/projetos/Zelda/Content/bin/Windows/Content/sound.xnb</DestFile>
+  <DestTime>2025-05-25T18:45:36.322229+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2025-04-05T11:10:54+01:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2025-04-05T11:10:54+01:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/IPCA/1º Ano/2º Semestre/TDV/IPCA_TDVJ_TP2_2425/IPCA_TDVJ_TP2_2425/projetos/Zelda/Content/bin/Windows/Content/sound.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>
