@@ -5,7 +5,7 @@ using static Zelda.Game1;
 
 namespace Zelda
 {
-    class Player
+    public class Player
     {
         public Point Position { get; set; }
         private Game1 game;

@@ -2,20 +2,20 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 X                                              X
 X                                              X
 X                                              X
-X Y       #      X       #      X             X
+X Y       #      X       #      X              X
 X                                              X
-X              XXXXX                          X
+X              XXXXX                           X
 X                                              X
-X      XXXXXXXXXX       #                     X
+X      XXXXXXXXXX       #                      X
 X                                              X
 X                                              X
 X                                              X
 X         #                                    X
 X                            XXXXXXX           X
 X                                              X
-X       XXXXX                                   X
+X       XXXXX                                  X
 X                                              X
-X                                              X
+X                                 E            X
 X            #                                 X
 X                        XXXXXX                X
 X                                              X
@@ -30,7 +30,7 @@ X                        ####                  X
 X                                              X
 X                                              X
 X                                              X
+X                                        E     X
 X                                              X
-X                                              X
-X                                              X
+X          E                                   X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

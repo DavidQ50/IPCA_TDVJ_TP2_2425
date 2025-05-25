@@ -16,7 +16,7 @@ namespace Zelda
         public Direction direction = Direction.Down;
 
         public List<Point> boxes = new List<Point>();
-        private Player player;
+        public Player player;
 
         Texture2D playerTexture, boxTexture, floorTexture, wallTexture;
 
@@ -32,6 +32,9 @@ namespace Zelda
 
         public Vector2 cameraPosition = Vector2.Zero;
         private float cameraLerpSpeed = 0.1f; // Suavização do movimento
+
+        public List<Enemy> enemies = new List<Enemy>();
+        Texture2D enemyTexture;
 
         public Game1()
         {
@@ -67,6 +70,24 @@ namespace Zelda
 
             Texture2D playerSheet = Content.Load<Texture2D>("player");
             player.LoadContent(playerSheet);
+
+            enemyTexture = CreateColoredTexture(Color.Red); // Ou carregue uma textura: Content.Load<Texture2D>("enemy");
+
+            // Inicializa os inimigos (exemplo)
+            enemies.Add(new Enemy(this, 5, 5));
+            enemies.Add(new Enemy(this, 10, 8));
+            enemies.Add(new Enemy(this, 15, 3));
+
+            // Carrega as texturas dos inimigos
+            foreach (var enemy in enemies)
+            {
+                Texture2D enemySheet = Content.Load<Texture2D>("enemy");
+
+                foreach (var currentEnemy in enemies)
+                {
+                    currentEnemy.LoadContent(enemySheet);
+                }
+            }
         }
 
         private Texture2D CreateColoredTexture(Color color)
@@ -89,6 +110,12 @@ namespace Zelda
             CheckScreenTransition();
 
             base.Update(gameTime);
+
+            // Atualiza todos os inimigos
+            foreach (var enemy in enemies)
+            {
+                enemy.Update(gameTime);
+            }
         }
 
 
@@ -183,6 +210,14 @@ namespace Zelda
                     currentScreen.Y * screenHeightInTiles * TileSize));
             }
 
+            // Desenha todos os inimigos
+            foreach (var enemy in enemies)
+            {
+                enemy.Draw(_spriteBatch, new Vector2(
+                    currentScreen.X * screenWidthInTiles * TileSize,
+                    currentScreen.Y * screenHeightInTiles * TileSize));
+            }
+
             _spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -244,6 +279,10 @@ namespace Zelda
                         default:
                             mapData[x, y] = true; // Por padrão, é chão
                             break;
+                        case 'E': // Inimigo
+                            mapData[x, y] = true; // Chão com inimigo
+                            enemies.Add(new Enemy(this, x, y));
+                            break;
                     }
                 }
             }
@@ -267,4 +306,3 @@ namespace Zelda
         }
     }
 }
-
