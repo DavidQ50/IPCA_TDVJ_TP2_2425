@@ -5,18 +5,17 @@ namespace Zelda
 {
     public class Enemy
     {
-        public Point Position { get; private set; }
+        public Point Position { get; private set; }//Posição similar ao jogador
         private Game1 game;
         private Vector2 pixelPosition;
-        private float moveSpeed = 1.5f;
-
+        private float moveSpeed = 1.5f;//Velocidade (1.5 tiles/segundo)
         // Variáveis para animação
-        private Texture2D spriteSheet;
-        private Rectangle[] frames;
+        private Texture2D spriteSheet;//Sistema de animação
+        private Rectangle[] frames;//Sistema de animação
         private int currentFrame;
         private float frameTime = 0.15f;
         private float elapsedTime;
-        private int animationDirection; // 0=down, 1=up, 2=left, 3=right
+        private int animationDirection; // Direção atual (0-3 para down, up, left, right)
 
         public Enemy(Game1 game, int x, int y)
         {
@@ -25,7 +24,7 @@ namespace Zelda
             pixelPosition = new Vector2(x * game.TileSize, y * game.TileSize);
         }
 
-        public void LoadContent(Texture2D sheet)
+        public void LoadContent(Texture2D sheet)//Configura spritesheet
         {
             spriteSheet = sheet;
 
@@ -48,7 +47,7 @@ namespace Zelda
             }
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)//Persegue o jogador na mesma tela
         {
             // Verificação de tela (como antes)
             bool playerInSameScreen =
@@ -120,7 +119,7 @@ namespace Zelda
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 screenOffset)
+        public void Draw(SpriteBatch spriteBatch, Vector2 screenOffset)//Renderiza com animação
         {
             int frameIndex = animationDirection * 4 + currentFrame;
             Vector2 drawPosition = new Vector2(

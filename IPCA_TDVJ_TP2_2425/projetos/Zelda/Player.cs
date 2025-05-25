@@ -9,27 +9,23 @@ namespace Zelda
 {
     public class Player
     {
-        public Point Position { get; set; }
+        public Point Position { get; set; }//Posição atual em tiles
         private Game1 game;
-
         // Variáveis para movimento suave
-        private Vector2 pixelPosition;
-        private float moveSpeed = 200f; // pixels por segundo
+        private Vector2 pixelPosition;//Posição precisa em pixels (para movimento suave)
+        private float moveSpeed = 200f; //Velocidade de movimento (200 pixels/segundo)
         private Direction lastMoveDirection;
         private bool isMoving = false;
-
         public Texture2D Texture { get; set; }
         public int TileSize { get; set; }
-
-        private Texture2D spriteSheet;
+        private Texture2D spriteSheet;//Sistema de animação por spritesheet
         private Rectangle[] frames;
         private int currentFrame;
         private float frameTime = 0.1f; // Tempo entre frames 
         private float elapsedTime;
         private int animationDirection;
-
-        public List<Projectile> Projectiles { get; private set; } = new List<Projectile>();
-        private float attackCooldown = 0.3f;
+        public List<Projectile> Projectiles { get; private set; } = new List<Projectile>();//Lista de projéteis ativos
+        private float attackCooldown = 0.3f;//Tempo entre ataques (0.3 segundos)
         private float currentCooldown = 0;
         private Texture2D projectileTexture;
 
@@ -41,7 +37,7 @@ namespace Zelda
             pixelPosition = new Vector2(x * game.TileSize, y * game.TileSize);
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)//Lógica de movimento, animação e ataque
         {
             KeyboardState kstate = Keyboard.GetState();
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -196,7 +192,7 @@ namespace Zelda
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 screenPosition)
+        public void Draw(SpriteBatch spriteBatch, Vector2 screenPosition)//Desenha o jogador
         {
             // Desenhar o jogador na posição em pixels
             int frameIndex = animationDirection * 4 + currentFrame;
@@ -214,8 +210,8 @@ namespace Zelda
                 0f
             );
         }
-            public void DrawProjectiles(SpriteBatch spriteBatch, Vector2 screenOffset)
-            {
+            public void DrawProjectiles(SpriteBatch spriteBatch, Vector2 screenOffset)//Desenha todos os projéteis
+        {
             foreach (var projectile in Projectiles)
                 {
                     projectile.Draw(spriteBatch, screenOffset);
@@ -223,7 +219,7 @@ namespace Zelda
             }
         
 
-        public void LoadContent(Texture2D sheet)
+        public void LoadContent(Texture2D sheet)//Carrega a spritesheet e configura animações
         {
             spriteSheet = sheet;
             int frameWidth = sheet.Width / 4;  // 4 frames por linha
@@ -245,7 +241,7 @@ namespace Zelda
             }
         }
 
-        public void LoadProjectileTexture(Texture2D tex)
+        public void LoadProjectileTexture(Texture2D tex)//Configura textura dos projéteis
         {
             projectileTexture = tex;
         }

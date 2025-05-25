@@ -5,10 +5,10 @@ namespace Zelda
 {
     public class Projectile
     {
-        public Vector2 Position { get; private set; }
+        public Vector2 Position { get; private set; }//Posição e vetor de movimento
         public Vector2 Direction { get; private set; }
-        public float Speed { get; private set; }
-        public bool Active { get; private set; }
+        public float Speed { get; private set; }//Velocidade do projétil
+        public bool Active { get; private set; }// Se ainda está em movimento
         private Game1 game;
         private Texture2D texture;
 
@@ -26,7 +26,7 @@ namespace Zelda
             texture = tex;
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)//Movimenta e verifica se saiu da tela
         {
             if (!Active) return;
 
@@ -40,7 +40,7 @@ namespace Zelda
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 screenOffset)
+        public void Draw(SpriteBatch spriteBatch, Vector2 screenOffset)//Renderiza com rotação adequada
         {
             if (!Active) return;
 
@@ -78,7 +78,7 @@ namespace Zelda
         }
 
         // Auxiliar: Converte vetor direção para índice (0-3)
-        private int GetDirectionIndex(Vector2 dir)
+        private int GetDirectionIndex(Vector2 dir)//Auxiliar para determinar rotação
         {
             if (dir.Y < 0) return 0;    // Cima
             if (dir.Y > 0) return 1;    // Baixo
@@ -86,7 +86,7 @@ namespace Zelda
             return 3;                   // Direita
         }
 
-        public Rectangle GetBounds()
+        public Rectangle GetBounds()//Retângulo de colisão
         {
             return new Rectangle((int)Position.X, (int)Position.Y, texture.Width, texture.Height);
         }

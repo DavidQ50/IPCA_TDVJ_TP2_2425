@@ -6,39 +6,31 @@ using System.Linq;
 using System.IO;
 using Microsoft.Xna.Framework.Media;
 using System;
+using System.Collections;
 
 namespace Zelda
 {
     public class Game1 : Game
     {
-        GraphicsDeviceManager _graphics;
-        SpriteBatch _spriteBatch;
-
-        public enum Direction { Up, Down, Left, Right }
+        GraphicsDeviceManager _graphics;//Gerencia a configuração gráfica do jogo
+        SpriteBatch _spriteBatch;//Responsável por desenhar sprites na tela
+        public enum Direction { Up, Down, Left, Right }//Direção atual do jogador (enum com Up, Down, Left, Right)
         public Direction direction = Direction.Down;
-
-        public List<Point> boxes = new List<Point>();
-        public Player player;
-
-        Texture2D playerTexture, boxTexture, floorTexture, wallTexture;
-
-        bool[,] mapData;
-        public int mapWidth { get; private set; }
-        public int mapHeight { get; private set; }
-
-        public int TileSize { get; } = 64;
-        public const int screenWidthInTiles = 16;
-        public const int screenHeightInTiles = 12;
-
-        public Point currentScreen = Point.Zero; // Começa na tela (0,0)
-
-        public Vector2 cameraPosition = Vector2.Zero;
+        public List<Point> boxes = new List<Point>();//Lista de posições da areia no mapa
+        public Player player;// Instância do jogador
+        Texture2D playerTexture, boxTexture, floorTexture, wallTexture;//Texturas dos elementos do jogo
+        bool[,] mapData;//Matriz que representa o mapa (true = caminhável, false = parede)
+        public int mapWidth { get; private set; }//Dimensões do mapa em tiles
+        public int mapHeight { get; private set; }//Dimensões do mapa em tiles
+        public int TileSize { get; } = 64;//Tamanho de cada tile em pixels (64)
+        public const int screenWidthInTiles = 16;//Tamanho da tela em tiles (16x12)
+        public const int screenHeightInTiles = 12;//Tamanho da tela em tiles (16x12)
+        public Point currentScreen = Point.Zero; // Tela atual no sistema de múltiplas telas
+        public Vector2 cameraPosition = Vector2.Zero;//Controle da câmera
         private float cameraLerpSpeed = 0.1f; // Suavização do movimento
-
-        public List<Enemy> enemies = new List<Enemy>();
-
-        private Song _song;
-        private float _volume = 0.5f;
+        public List<Enemy> enemies = new List<Enemy>();//Lista de inimigos
+        private Song _song;//Música de fundo
+        private float _volume = 0.5f;//Volume do áudio (0.5f = 50%)
 
         public Game1()
         {
@@ -49,13 +41,13 @@ namespace Zelda
             IsMouseVisible = true;
         }
 
-        protected override void Initialize()
+        protected override void Initialize()//Inicializa o jogo e carrega o mapa
         {
             LoadMap("map.txt");
             base.Initialize();
         }
 
-        protected override void LoadContent()
+        protected override void LoadContent()// Carrega todos os recursos (texturas, sons)
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -105,7 +97,7 @@ namespace Zelda
             return texture;
         }
 
-        protected override void Update(GameTime gameTime)
+        protected override void Update(GameTime gameTime)//Lógica principal do jogo frame by frame
         {
             UpdateCamera();
 
@@ -168,7 +160,7 @@ namespace Zelda
 
         }
 
-        private void CheckScreenTransition()
+        private void CheckScreenTransition()//Gerencia a mudança entre telas/áreas
         {
             if (player == null) return;
 
@@ -188,7 +180,7 @@ namespace Zelda
         }
 
 
-        protected override void Draw(GameTime gameTime)
+        protected override void Draw(GameTime gameTime)// Desenha todos os elementos na tela
         {
             GraphicsDevice.Clear(Color.Black);
             _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointWrap);
@@ -275,12 +267,12 @@ namespace Zelda
             base.Draw(gameTime);
         }
 
-        public bool HasBox(int x, int y)
+        public bool HasBox(int x, int y)//Verificam colisão
         {
             return boxes.Any(b => b.X == x && b.Y == y);
         }
 
-        public bool FreeTile(int x, int y)
+        public bool FreeTile(int x, int y)//Verificam colisão 
         {
             // Verificar limites do mapa
             if (x < 0 || y < 0 || x >= mapWidth || y >= mapHeight)
@@ -297,7 +289,7 @@ namespace Zelda
             return true;
         }
 
-        void LoadMap(string filePath)
+        void LoadMap(string filePath)//Carrega o mapa a partir de arquivo .txt
         {
             string[] lines = File.ReadAllLines(Path.Combine(Content.RootDirectory, filePath));
 
@@ -340,7 +332,7 @@ namespace Zelda
                 }
             }
         }
-        private void UpdateCamera()
+        private void UpdateCamera()//Controla o movimento suave da câmera
         {
             if (player == null) return;
 
