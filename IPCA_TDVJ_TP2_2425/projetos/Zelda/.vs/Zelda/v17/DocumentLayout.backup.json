@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\",
+  "WorkspaceRootPath": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\ipca\\1\u00BA ano\\2\u00BA semestre\\tdv\\ipca_tdvj_tp2_2425\\ipca_tdvj_tp2_2425\\projetos\\zelda\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\users\\briel\\desktop\\ipca_tdvj_tp2_2425\\projetos\\zelda\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\users\\briel\\desktop\\ipca_tdvj_tp2_2425\\projetos\\zelda\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\ipca\\1\u00BA ano\\2\u00BA semestre\\tdv\\ipca_tdvj_tp2_2425\\ipca_tdvj_tp2_2425\\projetos\\zelda\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\users\\briel\\desktop\\ipca_tdvj_tp2_2425\\projetos\\zelda\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\ipca\\1\u00BA ano\\2\u00BA semestre\\tdv\\ipca_tdvj_tp2_2425\\ipca_tdvj_tp2_2425\\projetos\\zelda\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\users\\briel\\desktop\\ipca_tdvj_tp2_2425\\projetos\\zelda\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|solutionrelative:projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\ipca\\1\u00BA ano\\2\u00BA semestre\\tdv\\ipca_tdvj_tp2_2425\\ipca_tdvj_tp2_2425\\projetos\\zelda\\content\\map.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\users\\briel\\desktop\\ipca_tdvj_tp2_2425\\projetos\\zelda\\content\\map.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|solutionrelative:content\\map.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|c:\\ipca\\1\u00BA ano\\2\u00BA semestre\\tdv\\ipca_tdvj_tp2_2425\\ipca_tdvj_tp2_2425\\projetos\\zelda\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B54A9D29-3823-4123-9596-73BBC2BFC865}|Zelda.csproj|solutionrelative:enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,69 +33,69 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Projectile.cs",
-              "DocumentMoniker": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Projectile.cs",
-              "RelativeDocumentMoniker": "Projectile.cs",
-              "ToolTip": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Projectile.cs",
-              "RelativeToolTip": "Projectile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T12:21:39.548Z"
+              "DocumentIndex": 4,
+              "Title": "map.txt",
+              "DocumentMoniker": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Content\\map.txt",
+              "RelativeDocumentMoniker": "Content\\map.txt",
+              "ToolTip": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Content\\map.txt*",
+              "RelativeToolTip": "Content\\map.txt*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-22T18:39:43.846Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "map.txt",
-              "DocumentMoniker": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Content\\map.txt",
-              "RelativeDocumentMoniker": "Content\\map.txt",
-              "ToolTip": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Content\\map.txt",
-              "RelativeToolTip": "Content\\map.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-22T18:39:43.846Z"
+              "Title": "Projectile.cs",
+              "DocumentMoniker": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Projectile.cs",
+              "RelativeDocumentMoniker": "Projectile.cs",
+              "ToolTip": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Projectile.cs",
+              "RelativeToolTip": "Projectile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T12:21:39.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:36:58.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Player.cs",
-              "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Player.cs",
-              "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T11:36:58.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAtwGEAAAAKAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Game1.cs*",
+              "RelativeToolTip": "Game1.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T22:50:36.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Enemy.cs",
               "RelativeDocumentMoniker": "Enemy.cs",
-              "ToolTip": "C:\\IPCA\\1\u00BA Ano\\2\u00BA Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Enemy.cs",
+              "ToolTip": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Enemy.cs",
               "RelativeToolTip": "Enemy.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAkwBYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAkwAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T16:16:59.728Z"
+              "WhenOpened": "2025-05-24T16:16:59.728Z",
+              "EditorCaption": ""
             }
           ]
         }

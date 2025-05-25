@@ -36,7 +36,6 @@ namespace Zelda
         private float cameraLerpSpeed = 0.1f; // Suavização do movimento
 
         public List<Enemy> enemies = new List<Enemy>();
-        //Texture2D enemyTexture;
 
         private Song _song;
         private float _volume = 0.5f;
@@ -61,10 +60,9 @@ namespace Zelda
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // Criar texturas simples
-            playerTexture = CreateColoredTexture(Color.Blue);
-            boxTexture = CreateColoredTexture(Color.SaddleBrown);
             floorTexture = Content.Load<Texture2D>("thornfloor damp");
-            wallTexture = CreateColoredTexture(Color.DarkSlateGray);
+            wallTexture = Content.Load<Texture2D>("water");
+            boxTexture = Content.Load<Texture2D>("sand");
 
             // Inicializar o player com as texturas necessárias
             if (player != null)

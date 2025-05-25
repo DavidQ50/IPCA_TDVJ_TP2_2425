@@ -95,3 +95,39 @@ C:\IPCA\1º Ano\2º Semestre\TDV\IPCA_TDVJ_TP2_2425\IPCA_TDVJ_TP2_2425\projetos\
 C:\IPCA\1º Ano\2º Semestre\TDV\IPCA_TDVJ_TP2_2425\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\ref\Zelda.dll
 C:\IPCA\1º Ano\2º Semestre\TDV\IPCA_TDVJ_TP2_2425\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\sound.wma
 C:\IPCA\1º Ano\2º Semestre\TDV\IPCA_TDVJ_TP2_2425\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\sound.xnb
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\sound.wma
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\sound.xnb
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Zelda.exe
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\enemy.png
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\map.txt
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\player.png
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\projectile.png
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\sound.mp3
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\thornfloor damp.png
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Zelda.deps.json
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Zelda.runtimeconfig.json
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Zelda.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Zelda.pdb
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\MonoGame.Framework.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.Direct2D1.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.Direct3D11.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.Direct3D9.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.DXGI.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.Mathematics.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.MediaFoundation.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.XAudio2.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\SharpDX.XInput.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.csproj.AssemblyReference.cache
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.AssemblyInfoInputs.cache
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.AssemblyInfo.cs
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.csproj.CoreCompileInputs.cache
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.csproj.Up2Date
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\refint\Zelda.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.pdb
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\Zelda.genruntimeconfig.cache
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\obj\Debug\net8.0-windows\ref\Zelda.dll
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\water.png
+C:\Users\Briel\Desktop\IPCA_TDVJ_TP2_2425\projetos\Zelda\bin\Debug\net8.0-windows\Content\sand.png

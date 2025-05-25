@@ -9,7 +9,6 @@ namespace Zelda
         private Game1 game;
         private Vector2 pixelPosition;
         private float moveSpeed = 1.5f;
-        //private int detectionRange = 16;
 
         // Variáveis para animação
         private Texture2D spriteSheet;

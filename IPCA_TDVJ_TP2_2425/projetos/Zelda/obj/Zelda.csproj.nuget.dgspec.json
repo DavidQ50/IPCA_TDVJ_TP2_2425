@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj": {}
+    "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj": {}
   },
   "projects": {
-    "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj": {
+    "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj",
+        "projectUniqueName": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj",
         "projectName": "Zelda",
-        "projectPath": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj",
-        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "C:\\IPCA\\1º Ano\\2º Semestre\\TDV\\IPCA_TDVJ_TP2_2425\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\obj\\",
+        "projectPath": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\Zelda.csproj",
+        "packagesPath": "C:\\Users\\Briel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Briel\\Desktop\\IPCA_TDVJ_TP2_2425\\projetos\\Zelda\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Briel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
