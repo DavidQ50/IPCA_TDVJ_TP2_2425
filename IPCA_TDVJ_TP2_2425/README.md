@@ -1,7 +1,5 @@
 # IPCA_TDVJ_TP2_2425
 
-# IPCA_TDVJ_TP2_2425
-
 # Trabalho prático - Técnicas de desenvolvimento de videojogos
 
 David Querido nº 33219
